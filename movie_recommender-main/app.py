@@ -6,11 +6,11 @@ import itertools
 st.title('映画レコメンド')
 
 # 映画情報の読み込み
-movies = pd.read_csv("movie_recommender-main/data/movies.tsv", sep="\t")
+movies = pd.read_csv("movie_recommend/movie_recommender-main/data/movies.tsv", sep="\t")
 
 # 学習済みのitem2vecモデルの読み込み
 
-model = gensim.models.word2vec.Word2Vec.load("movie_recommender-main/data/item2vec.model")
+model = gensim.models.word2vec.Word2Vec.load("movie_recommend/movie_recommender-main/data/item2vec.model")
 model.save("item2vec.model")
 
 # 映画IDとタイトルを辞書型に変換
